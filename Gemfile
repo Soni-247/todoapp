@@ -47,8 +47,8 @@ end
 
 group :development, :test do
  # Allowing rspec testing on the application 
- gem 'rspec-rails', ">= 3.9.0"
-  gem 'factory-bot'
+  gem 'rspec-rails', ">= 3.9.0"
+  gem 'factory_bot'
   
 end
 
@@ -62,3 +62,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Add devise for authentication
+gem 'devise'
