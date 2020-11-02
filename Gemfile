@@ -45,6 +45,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :development, :test do
+ # Allowing rspec testing on the application 
+ gem 'rspec-rails', ">= 3.9.0"
+  gem 'factory-bot'
+  
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
