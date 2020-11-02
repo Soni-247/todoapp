@@ -43,8 +43,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', ">= 3.9.0"
-  # Allowing rspec testing on the application
+ # Allowing rspec testing on the application 
+ gem 'rspec-rails', ">= 3.9.0"
+  gem 'factory-bot'
+  
 end
 
 group :test do
