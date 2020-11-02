@@ -237,7 +237,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  factory_bot
+  factory_bot (~> 6.1)
   font-awesome-sass
   jbuilder (~> 2.7)
   listen (~> 3.2)
