@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'user'
 
 # RSpec.describe TodoListsController, type: :controller do
 #     describe "GET index" do
@@ -27,46 +28,26 @@ require 'rails_helper'
 #   end
 # end
 
-RSpec.describe TodoListsController, type: :controller do
+# RSpec.describe TodoListsController, type: :controller do
 
-  login_user
+#   login_user
 
-  let(:valid_attributes) {
-      { :title => "Test title!", :description => "This is a test description"}
-  }
+#   let(:valid_attributes) {
+#       { :title => "Test title!", :description => "This is a test description"}
+#   }
 
-  let(:valid_session) { {} }
+#   let(:valid_session) { {} }
 
-  describe "GET #index" do
-      it "returns a success response" do
-          TodoList.create! valid_attributes
-          get :index, params: {}, session: valid_session
+#   describe "GET #index" do
+#       it "returns a success response" do
+#           TodoList.create! valid_attributes
+#           get :index, params: {}, session: valid_session
 
-          expect(response).to be_successful # be_successful expects a HTTP Status code of 200
-          # expect(response).to have_http_status(302) # Expects a HTTP Status code of 302
-      end
-  end
-end
-
-RSpec.describe TodoList, type: :model do
-  let(:valid_attributes) {
-    { :title => "Test title!", :description => "This is a test description"}
-    }
-    let(:valid_session) { {} }
-
-  it 'should have a title' do
-    expect(TodoList.new).to respond_to :title
-  end
-
-  it 'should save list into the database' do
-    expect(User.new).to change {User.count}.by(1)
-  end
-
-  it 'should have a description' do
-    expect(TodoList.new).to respond_to :description
-  end
-
-end
+#           expect(response).to be_successful # be_successful expects a HTTP Status code of 200
+#           # expect(response).to have_http_status(302) # Expects a HTTP Status code of 302
+#       end
+#   end
+# end
 
 RSpec.describe TodoItem, type: :model do 
 
