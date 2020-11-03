@@ -32,7 +32,7 @@ RSpec.describe TodoListsController, type: :controller do
   login_user
 
   let(:valid_attributes) {
-      { :title => "Test title!", :description => "This is a test description", :status => "draft" }
+      { :title => "Test title!", :description => "This is a test description"}
   }
 
   let(:valid_session) { {} }
@@ -59,7 +59,7 @@ RSpec.describe TodoList, type: :model do
   end
 
   it 'should save list into the database' do
-    expect(TodoList.new).to change {TodoList.count}.by(1)
+    expect(User.new).to change {User.count}.by(1)
   end
 
   it 'should have a description' do
