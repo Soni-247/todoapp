@@ -63,8 +63,23 @@ RSpec.describe TodoList, type: :model do
   end
 
   it 'should have a description' do
-
+    expect(TodoList.new).to respond_to :description
   end
 
 end
 
+RSpec.describe TodoItem, type: :model do 
+
+  it 'should create a new list item' do
+    
+  end
+  
+  it 'should check an item when checked' do
+    
+  end
+
+  it 'should delete an item when deleted' do
+    
+  end
+
+end
