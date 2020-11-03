@@ -1,13 +1,17 @@
-<h2 class = todo_list_title >Log in</h2>
+<h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="login-field">
+  <div class="login-label">
     <%= f.label :email %><br />
+    </div>
+    <div class = "login-field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="login-field">
+  <div class="login-label">
     <%= f.label :password %><br />
+    </div>
+    <div class = "login-field">
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
