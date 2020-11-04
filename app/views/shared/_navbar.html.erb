@@ -1,25 +1,30 @@
-<nav>
-    <% if user_signed_in? %>
-        <span class= "nav-greeting"> <%= "Hello, #{current_user.username}!" %> <span/>
-        <div class = "nav-menu">
-            <div class = "one-link">
-                <%= link_to "My First To Do List", todo_lists_path%>
-            </div>
-            
-            <div class = "one-link">
-                <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
-            </div>
-        
-        </div>
 
-    <% else %>
+<nav class="navbar" style="background-color: #DDBDD5;">
+  <h2 class = "todo_list_title">My First To Do List</h2>
+  
+    <span class="navbar-toggler-icon"></span>
+ 
+  <div class="navbar">
+    <% if user_signed_in? %>
+
+
+
+        <div class = "one-link">
+        <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
+        </div>
+        <div class = "one-link">
+        <%= link_to "Home", todo_lists_path%>
+        
+        <% else %>
         <div class = "nav-menu">
             <div class = "one-link">
-                <%= link_to "My First To Do List", new_user_session_path%>
+            <%= link_to "Home", new_user_session_path%>
             </div>
             <div class = "one-link">
-                <%= link_to "Sign Up", new_user_registration_path %>
+            <%= link_to "Sign Up", new_user_registration_path %>
+
             </div>
         </div>
     <% end %>
+  </div>
 </nav>

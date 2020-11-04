@@ -30,6 +30,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Custom gems
 gem 'font-awesome-sass'
+gem 'bootstrap', '~> 4.5.2'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

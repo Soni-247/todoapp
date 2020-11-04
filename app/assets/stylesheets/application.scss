@@ -15,7 +15,7 @@
  */
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
+@import "bootstrap";
  $white_opaque: rgba(250, 250, 250, .3);
  
 
@@ -286,14 +286,14 @@ h2 {
 
 .nav-menu {
     list-style-type: none;
-    display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
+
 	
+	text-align: right;
     font-size: 20px;
     text-decoration: none;
     margin: 5px;
 	color: black;
+	
 	a {
 		text-decoration: none;
 		&:hover {
@@ -305,10 +305,25 @@ h2 {
     
 }
 
+
+
+#navbarNavAltMarkup {
+	text-align: right;
+}
+
+.navbar-brand {
+	font-size: 26px;
+	font-weight: 400;
+}
+
 .one-link {
-	display: inline-block;
-	margin: 0;
+
+
 	
+
+	margin-left: 20px;
+	color: black;
+
 }
 
 ::-webkit-input-placeholder { color: black; }
