@@ -5,40 +5,42 @@
 
   <div class = "login-label">
     <%= f.label :Username %><br />
-    </div>
-    <div class = "login-field">
+  </div>
+    <div class = "login-field" id= "username">
     <%= f.text_field :username, autofocus: true, required: true %>
   </div>
+
+
+
   <div class = "login-label">
     <%= f.label :email %><br />
-     </div>
-     <div class = "login-field">
+  </div>
+  <div class = "login-field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class = "login-label">
     <%= f.label :password %>
-    
-
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    </div>
-    <div class = "login-field">
+  </div>
+  <div class = "login-field">
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class = "login-label">
     <%= f.label :password_confirmation %><br />
-    </div>
-    <div class = "login-field">
+  </div>
+  <div class = "login-field">
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-    <div class = "login-actions">
+  <div class = "login-actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+
 <div class = "shared-links">
 <%= render "devise/shared/links" %>
 </div>
